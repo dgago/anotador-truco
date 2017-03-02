@@ -1,0 +1,37 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "PWA starter with ts.",
+  "main": "index.html",
+  "scripts": {
+    "clean": "gulp clean",
+    "compile": "gulp compile",
+    "build": "gulp build",
+    "serve": "gulp serve"
+  },
+  "keywords": [
+    "pwa",
+    "starter",
+    "ts"
+  ],
+  "author": "dgago",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-tslint": "^7.1.0",
+    "gulp-typescript": "^3.1.5",
+    "gulp-uglify": "^2.0.1",
+    "run-sequence": "^1.2.2",
+    "sw-precache": "^5.0.0",
+    "tslint": "^4.5.1",
+    "typescript": "^2.1.6",
+    "typings": "^2.1.0"
+  }
+}

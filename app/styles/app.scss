@@ -1,0 +1,19 @@
+html,
+body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+anotador {
+  text-align: center;
+  .md-display-4 {
+    font-weight: 400;
+  }
+  .malas {
+    color: red;
+  }
+  .buenas {
+    color: green;
+  }
+}

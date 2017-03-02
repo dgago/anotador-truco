@@ -1,0 +1,38 @@
+<h1>Anotador</h1>
+<div layout="row">
+  <div flex="50" layout="column" layout-align="center center">
+    <div>Nosotros</div>
+    <div ng-show="$ctrl.nos < 15" class="md-display-4 malas">{{$ctrl.nos}}</div>
+    <div ng-show="$ctrl.nos >= 15" class="md-display-4 buenas">{{$ctrl.nos - 15}}</div>
+    <div ng-show="$ctrl.nos < 15" class="malas">malas</div>
+    <div ng-show="$ctrl.nos >= 15 && $ctrl.nos < 30" class="buenas">buenas</div>
+    <div ng-show="$ctrl.nos >= 30" class="buenas">Ganadores!</div>
+    <div layout="row">
+      <md-button class="md-fab md-accent" ng-click="$ctrl.sumar('nos')">
+        <md-icon class="material-icons">add</md-icon>
+      </md-button>
+      <md-button class="md-fab md-accent" ng-click="$ctrl.restar('nos')">
+        <md-icon class="material-icons">remove</md-icon>
+      </md-button>
+    </div>
+  </div>
+  <div flex="50" layout="column" layout-align="center center">
+    <div>Ellos</div>
+    <div ng-show="$ctrl.ellos < 15" class="md-display-4 malas">{{$ctrl.ellos}}</div>
+    <div ng-show="$ctrl.ellos >= 15" class="md-display-4 buenas">{{$ctrl.ellos - 15}}</div>
+    <div ng-show="$ctrl.ellos < 15" class="malas">malas</div>
+    <div ng-show="$ctrl.ellos >= 15 && $ctrl.ellos < 30" class="buenas">buenas</div>
+    <div ng-show="$ctrl.ellos >= 30" class="buenas">Ganadores!</div>
+    <div layout="row">
+      <md-button class="md-fab md-accent" ng-click="$ctrl.sumar('ellos')">
+        <md-icon class="material-icons">add</md-icon>
+      </md-button>
+      <md-button class="md-fab md-accent" ng-click="$ctrl.restar('ellos')">
+        <md-icon class="material-icons">remove</md-icon>
+      </md-button>
+    </div>
+  </div>
+</div>
+<div layout="row" layout-align="center center" layout-padding>
+  <md-button class="md-raised md-warn" ng-click="$ctrl.nuevo()">Nuevo partido</md-button>
+</div>

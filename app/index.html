@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es" ng-app="app">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Anotador de Truco">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anotador de Truco</title>
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Anotador de Truco">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Anotador de Truco">
+  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="images/touch/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/touch/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/touch/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/touch/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/touch/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/touch/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/touch/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/touch/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/touch/apple-touch-icon-180x180.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="images/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color=":color:">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content=":color:">
+
+  <!-- Color the status bar on mobile devices -->
+  <meta name="theme-color" content=":color:">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+  <!-- RSS -->
+  <!--
+	<link rel="alternate" type="application/rss+xml" title="example.com RSS Feed" href="http://example.com/rss.xml">
+	<link rel="alternate" type="application/rss+xml" title="My Blog" href="/rss.xml">
+  -->
+
+  <!-- Social -->
+  <!--<meta name="author" content="Diego Gago">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="Anotador de Truco">
+  <meta property="og:image" content="http://example.com/images/avatar@2x.png">
+  <meta name="twitter:image:src" content="http://example.com/images/avatar@2x.png">
+  <meta name="twitter:creator" content=":twitter-account:">
+  <meta name="twitter:url" content="http://www.example.com/">
+  <meta name="twitter:title" content="Diego Gago">-->
+
+  <!-- Angular Material styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.3/angular-material.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <!-- Your styles -->
+  <link rel="stylesheet" href="styles/app.css">
+
+</head>
+
+<body>
+  <!-- Add your site or app content here -->
+  <anotador></anotador>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD73MafVPjnBsa6JgMF21-4cdjlMzhz5nk",
+      authDomain: "anotador-de-truco-747a6.firebaseapp.com",
+      databaseURL: "https://anotador-de-truco-747a6.firebaseio.com",
+      storageBucket: "anotador-de-truco-747a6.appspot.com",
+      messagingSenderId: "686851004448"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.2/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.2/angular-animate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.2/angular-aria.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.2/angular-messages.min.js"></script>
+
+  <!-- Angular Translate -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.15.0/angular-translate.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.3/angular-material.min.js"></script>
+
+  <!-- build:js scripts/app.min.js -->
+  <script src="scripts/app.js"></script>
+  <!-- endbuild -->
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-XXXXX-X', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!-- Built with love using Anotador de Truco -->
+</body>
+
+</html>
